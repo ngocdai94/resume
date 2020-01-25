@@ -1,1 +1,422 @@
+% Author: Dai N. Nguyen
+% Document type: Resume
 
+\documentclass[letterpage]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DEFINE DEFAULT FONT STYLE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fontawesome}
+\usepackage[defaultsans]{cantarell}
+\usepackage[default,scale=0.95]{carlito}
+\usepackage[T1]{fontenc}
+\fontsize{10px}{0.45px}\selectfont
+\usepackage{lmodern}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DEFINE PAGE LAYOUT & SPACING
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% For NO HYPHEN
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+% NO HYPHEN END
+\usepackage[top=0.7in, bottom=0.7in, left=0.55in,
+right=0.85in]{geometry}
+\usepackage{setspace} % for line spacing
+\usepackage{vwcol} % unused - for columns with different widths
+\usepackage{multicol} % unused - for columns with equal widths
+% currently using minipage to create columns
+\usepackage{enumitem} % for 'itemize' configuration
+% http://ctan.org/pkg/enumitem
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COLOR PACKAGE & PREDEFINED COLORS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[dvipsnames]{xcolor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% OTHER PACKAGES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{verbatim} % for multi-line comments
+\usepackage{graphicx} % for rotating text boxes
+\usepackage{tikz} % for drawing shapes
+\usepackage{amssymb,amsmath}
+\usepackage{mathabx} % for math symbols
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  % Setup & declare Unicode characters
+  \usepackage[utf8]{inputenc}
+  \DeclareUnicodeCharacter{0160}{\^--}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim
+% environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath}
+% ^ disable protrusion for tt fonts
+}{}
+\usepackage[unicode=true]{hyperref}
+\hypersetup{
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{graphicx,grffile} % for inserting pictures
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else
+\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else
+\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow 
+% the page margins by default, and it is still possible to
+% overwrite the defaults using explicit options in
+% \includegraphics[width,height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+\begin{document}
+\thispagestyle{empty} % to remove page number
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADER: NAME & INFOMARTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}[]{0.4\linewidth}
+\raggedright
+\textbf{\fontsize{37px}{1px}\selectfont\textsf{DAI}}\\
+\vspace{7px}
+{\fontsize{37px}{1px}\selectfont\textsf{NGUYEN}}
+\end{minipage}
+\begin{minipage}{0.01\linewidth}
+% INTENTIONALLY LEFT BLANK
+\end{minipage}
+\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\: % space between minipages
+\begin{minipage}{0.55\linewidth}
+\raggedleft
+\vspace{5px} % for formatting purpose
+dai-nguyen.com\enspace\faGlobe\\
+hire@dai-nguyen.com\enspace\faPaperPlane\\
+linkedin.dai-nguyen.com\enspace\faLinkedin\\
+github.dai-nguyen.com\enspace\faGithubAlt
+\end{minipage}
+\vspace{11px}\\
+%------------------------------------
+% First Column
+%------------------------------------
+\begin{minipage}[t]{0.424\linewidth}
+\vspace{0pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EDUCATION HISTORY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{\fontsize{14px}{1px}\selectfont E D U C A T I O N}\\
+\noindent\rule{2.45in}{0.1pt}
+\vspace{7px}\\
+%% College
+\textcolor{gray}{September 2018 - June 2020}\\
+\textbf{\textsf{Seattle Central College - Seattle, WA}}\\
+\textbf{Web Development Certificate}\\
+\textbf{Network Design \& Administration Certificate}
+\vspace{7px}
+
+%% University
+\textcolor{gray}{September 2015 - June 2018}\\
+\textbf{\textsf{Seattle University - Seattle, WA}}\\
+\textbf{Bachelor of Science in Electrical Engineering}
+% \textbf{Summa Cum Laude}\\
+% \textbf{GPA: 3.99 / 4.00}
+% \begin{itemize}[leftmargin=*,labelindent=5mm,labelsep=7mm]
+% \renewcommand\labelitemi{\rule[1mm]{0.33mm}{0.33mm}}
+% \renewcommand\labelitemii{$\blacksquare$}
+% \item
+%   Messina Merit Scholarship
+%   \begin{comment}
+%   {\begin{list}{}{} % to create indentation (w/o bulletpoints)
+%     \item
+%       For transfer student with
+%     \item
+%       minimum GPA of 3.75
+%   \end{list}}
+%   \end{comment}
+% \item
+%   IEEE-HKN Mu Iota Chapter
+%   {\begin{list}{}{}
+%     \item
+%     	Web Correspondent
+%   \end{list}}
+% \item
+%   Alpha Sigma Nu Jesuit Honor Society
+%   {\begin{list}{}{}
+%     \item
+%       Top 4\% of Senior Class
+%   \end{list}}
+% \item
+%   Tau Beta Pi Engineering Honor Society
+% \item
+%   Tau Sigma National Honor Society
+% \item
+%   President's and Dean's Lists
+%   {\begin{list}{}{}
+%     \item
+%     	September 2015 - June 2017
+%   \end{list}}
+% \end{itemize}
+\vspace{7px}
+
+%% College
+\textcolor{gray}{September 2013 - June 2015}\\
+\textbf{\textsf{Seattle Central College - Seattle, WA}}\\
+\textbf{Associate of Science Degree}
+\vspace{19px}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TECHNICAL SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{\fontsize{14px}{1px}\selectfont S K I L L S}\\
+\noindent\rule{2.45in}{0.1pt}
+\vspace{0px}\\
+\begin{minipage}[t]{0.01\linewidth}
+% INTENTIONALLY LEFT BLANK
+\end{minipage}
+\: % space between left margin and text
+
+\begin{minipage}[]{0.85\linewidth}
+\raggedright
+%\linespread{0.895}\selectfont
+\textcolor{gray}{Software and Platforms:}
+\begin{itemize}[label={},leftmargin=*,labelindent=5mm]
+\item
+Visual Studio,
+Eclipse,
+GitHub/GitLab,
+Microsoft Office,
+NI Multisim,
+NI Ultiboard,
+NI LabView,
+AutoCAD.
+macOS,
+Windows OS,
+Ubuntu OS,
+unRaid OS
+\end{itemize}
+\vspace{7px}
+\textcolor{gray}{Languages, Libraries, and Frameworks:}\\
+\begin{itemize}[label={},leftmargin=*,labelindent=5mm]
+\item
+JavaScript,
+jQuery,
+Node.js,
+Express.js,
+REST API,
+ReactJS,
+MATLAB,
+HTML,
+CSS,
+LaTeX,
+PHP,
+C,
+C++,
+C\#,
+VHDL,
+Python,
+MIPS Assembly Language,
+Java,
+AngularJS,
+MongoDB,
+SQL (MySql)
+\end{itemize}
+\vspace{7px}
+\textcolor{gray}{Network Protocols, Software and Hardware:}\\
+\begin{itemize}[label={},leftmargin=*,labelindent=5mm]
+\item
+TCP/IP,
+OSI, 
+OSPF,
+BGP,
+DNS,
+P2P,
+DHCP,
+VLAN,
+Windows Server 2012,
+Windows Server 2016,
+Ubiquiti Networks
+\end{itemize}
+\vspace{7px}
+\textcolor{gray}{Additional Skills:}
+\begin{itemize}[leftmargin=*,labelindent=5mm,labelsep=7mm]
+\renewcommand\labelitemi{\rule[1mm]{0.33mm}{0.33mm}}
+\renewcommand\labelitemii{$\blacksquare$} 
+\item
+  Full-stack web development
+\item
+  Wireless and Network Security Integration and Solution Design
+\item
+  PCB design, testing, and soldering
+\item
+  Custom IC layout design and testing
+  \begin{comment}(starting from
+  transistor level)\end{comment}
+\item
+  FPGA programming and testing
+\item
+  Researcher
+\item
+  Fast learner and a problem solver
+\item
+  Strong organizational, analytical, interpersonal,
+  and presentation skills
+\item
+  Experienced in Mobile application design and development
+\end{itemize}
+\end{minipage}
+\end{minipage}
+%------------------------------------
+% Second Column
+%------------------------------------
+\begin{minipage}[t]{0.63\linewidth}
+\vspace{0pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% RELEVANT EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{\fontsize{14px}{1px}\selectfont R E L E V A N T \:\:
+E X P E R I E N C E}\\
+\noindent\rule{4.295in}{0.1pt}
+
+%% Sync & Scale: Software Developer
+\vspace{7px}
+\textcolor{gray}{July 2019 - Present}\\
+\textbf{\textsf{Software Developer at Sync \& Scale}}
+\begin{itemize}[leftmargin=*,labelindent=1mm,labelsep=0mm]
+\renewcommand\labelitemi{\rule[1mm]{0.33mm}{0.33mm}}
+\renewcommand\labelitemii{$\blacksquare$}
+\item
+  \begin{quote}
+  \raggedright
+  Built a web application to handle 
+  multiple Degree, Minute, and Seconds (DMS) 
+  reverse geocoding querries to Google Maps by utilizing  
+  PHP, JavaScript, HTML, CSS, MySQL, and Google Maps API
+  \end{quote}
+\item
+  \begin{quote}
+  \raggedright
+  Helped the company to have a better visualization 
+  about their GPS attenas placement around the world by 
+  placing many markers on the Google Maps
+  \end{quote}
+\end{itemize}
+
+%% Seattle Central College: Book Appplication
+\vspace{7px}
+\textcolor{gray}{March - June 2019}\\
+\textbf{\textsf{Book Application Project at Seattle Central College}}
+\begin{itemize}[leftmargin=*,labelindent=1mm,labelsep=0mm]
+\renewcommand\labelitemi{\rule[1mm]{0.33mm}{0.33mm}}
+\renewcommand\labelitemii{$\blacksquare$}
+\item
+  \begin{quote}
+  \raggedright
+  Worked with Node Package Manager
+  \end{quote}
+\item
+  \begin{quote}
+  \raggedright
+  Built a simple book webpage application using Express.js, React.js,
+  MongoDB, and REST API to update the page without reloading it
+  \end{quote}
+\end{itemize}
+
+%% Seattle University: Undergraduate Research Assistant
+\vspace{7px}
+\textcolor{gray}{June - September 2017}\\
+\textbf{\textsf{Undergraduate Research Assistant at Seattle University}}
+\begin{itemize}[leftmargin=*,labelindent=1mm,labelsep=0mm]
+\renewcommand\labelitemi{\rule[1mm]{0.33mm}{0.33mm}}
+\renewcommand\labelitemii{$\blacksquare$}
+\item
+  \begin{quote}
+  \raggedright
+  Provided ongoing assistance to an assigned faculty member
+  \end{quote}
+\item
+  \begin{quote}
+  \raggedright
+  Handled various responsibilites related to research projects and 
+  miscellaneous assignments
+  \end{quote}
+\item
+\begin{quote}
+\raggedright
+  Assisted in the development and implementation of engineering projects,
+  including using MATLAB and ThingSpeak to design, build, and 
+  implement an image classification for an IoT application
+\end{quote}
+\end{itemize}
+
+%% Seattle City Light: Electrical Engineering Intern
+\vspace{7px}
+\textcolor{gray}{March - June 2017}\\
+\textbf{\textsf{Electrical Engineering Intern at Seattle City Light}}\\
+\raggedright
+  Designed, tested, and developed a prototype for a DC distribution
+  circuit to charge a cellphone by using a 6VDC Alkaline battery and
+  a 5V USB charger
+
+%% Senior Design / Interdisciplinary Project: PACCAR
+\vspace{7px}
+\textcolor{gray}{September 2016 - June 2017}\\
+\textbf{\textsf{Interdisciplinary Project:
+		PACCAR Tractor/Trailer Communication Phase II}}\\
+\raggedright
+Refined truck's trailer communication system via Bluetooth, XBee
+sensor modules implementation.
+\begin{itemize}[leftmargin=*,labelindent=1mm,labelsep=0mm]
+\renewcommand\labelitemi{\rule[1mm]{0.33mm}{0.33mm}}
+\renewcommand\labelitemii{$\blacksquare$}
+\item
+  \begin{quote}
+  \raggedright
+  Programmed Raspberry Pi 3 as a datahub to collect sensors' data
+  and store it in MySQL
+  \end{quote}
+\item
+  \begin{quote}
+  \raggedright
+  Programmed an Android tablet to connect to the datahub via Bluetooth
+  and get sensors' data from it
+  \end{quote}
+\end{itemize}
+
+
+
+\end{minipage}
+
+\end{document}
